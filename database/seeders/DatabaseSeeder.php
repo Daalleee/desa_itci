@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         $this->call(RolePermissionSeeder::class);
+        $this->call(KeluargaSeeder::class);
 
         $admin = User::factory()->create([
             'name' => 'Admin Desa',

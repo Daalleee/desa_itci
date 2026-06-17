@@ -1,8 +1,10 @@
 # PROGRES.MD - SIPDES ITCI
 
-> Terakhir diperbarui: 18 Juni 2026
+> Terakhir diperbarui: 18 Juni 2026 (Sesi 2)
 >
 > **Sesi 1 Selesai:** Packages ✓ | Migrations ✓ | Models ✓ | Seeders ✓ | Login ✓
+>
+> **Sesi 2 Selesai:** Modul Data Keluarga (KK + Anggota) ✓ | RT/RW free text ✓ | Wizard form + AlpineJS ✓ | Validasi client-side ✓ | Show/Edit/Hapus anggota ✓ | Tampilan index rapi ✓ | Urutan & label anak ✓ | Seeder 10 KK ✓ | Panel: Desa ITCI ✓
 
 ---
 
@@ -10,12 +12,13 @@
 
 | Fase | Progress |
 |------|----------|
-| Setup & Infrastruktur | **~60%** |
+| Setup & Infrastruktur | **~70%** |
 | Auth & Authorization | **~30%** |
-| Fase 1 (KKN) | **~1%** |
+| Fase 1 (KKN) - Data Keluarga | **~80%** |
+| Fase 1 (KKN) - Lainnya | **~5%** |
 | Fase 2 | **0%** |
 | Fase 3 | **0%** |
-| **Total Proyek** | **~8%** |
+| **Total Proyek** | **~18%** |
 
 ---
 
@@ -151,7 +154,8 @@
 | 5 | JenisSuratSeeder (7 jenis surat) | [x] |
 | 6 | RolePermissionSeeder (admin & operator_cms) | [x] |
 | 7 | AdminUserSeeder (akun admin default) | [x] |
-| 8 | DatabaseSeeder orchestrate (panggil semua seeder) | [x] |
+| 8 | KeluargaSeeder (10 KK + istri + anak) | [x] |
+| 9 | DatabaseSeeder orchestrate (panggil semua seeder) | [x] |
 
 ---
 
@@ -215,47 +219,33 @@
 | 9 | Grafik: penduduk berdasarkan pekerjaan | [ ] |
 | 10 | Route dashboard (GET /dashboard) | [x] |
 
-### C.2 Data Penduduk
+### C.2 Data Penduduk (Digantikan oleh Modul Data Keluarga — lihat I.1)
 
 | # | Task | Status |
 |---|------|--------|
-| 1 | Migration tabel `penduduk` (lengkap) | [ ] |
-| 2 | Model Penduduk (relations: agama, pendidikan, pekerjaan, KK, mutasi) | [ ] |
-| 3 | PendudukController (index, create, store, show, edit, update, destroy) | [ ] |
-| 4 | View: penduduk/index.blade.php (tabel + search) | [ ] |
-| 5 | View: penduduk/create.blade.php | [ ] |
-| 6 | View: penduduk/edit.blade.php | [ ] |
-| 7 | View: penduduk/show.blade.php (detail warga) | [ ] |
-| 8 | Routes: resource penduduk | [ ] |
-| 9 | StorePendudukRequest (validasi NIK unique, dll) | [ ] |
+| 1 | Migration tabel `penduduk` | [x] |
+| 2 | Model Penduduk (relations: agama, pendidikan, pekerjaan, KK, mutasi) | [x] |
+| 3 | PendudukController (index, create, store, show, edit, update, destroy) | [x] |
+| 4 | View: penduduk/index.blade.php (tabel + search) | [x] |
+| 5 | View: penduduk/create.blade.php | [x] |
+| 6 | View: penduduk/edit.blade.php | [x] |
+| 7 | View: penduduk/show.blade.php (detail warga) | [x] |
+| 8 | Routes: resource penduduk | [x] |
+| 9 | StorePendudukRequest (validasi NIK unique, dll) | [x] |
 | 10 | UpdatePendudukRequest | [ ] |
-| 11 | Fitur cari (NIK, Nama, No KK) | [ ] |
-| 12 | Import Excel penduduk | [ ] |
-| 13 | Export Excel penduduk | [ ] |
-| 14 | Export PDF penduduk | [ ] |
-| 15 | Soft delete / hapus penduduk | [ ] |
+| 11 | Fitur cari (NIK, Nama, No KK) | [x] |
+| 12-15 | Import/Export/Soft delete | [ ] |
 
-### C.3 Data Kartu Keluarga
+### C.3 Data Kartu Keluarga (Digantikan oleh Modul Data Keluarga — lihat I.1)
 
 | # | Task | Status |
 |---|------|--------|
-| 1 | Migration tabel `kartu_keluarga` | [ ] |
-| 2 | Migration update: tambah FK kepala_keluarga_id ke penduduk | [ ] |
-| 3 | Model KartuKeluarga (relations: wilayah, anggota keluarga) | [ ] |
-| 4 | KartuKeluargaController (index, create, store, show, edit, update, destroy) | [ ] |
-| 5 | View: kartu-keluarga/index.blade.php | [ ] |
-| 6 | View: kartu-keluarga/create.blade.php | [ ] |
-| 7 | View: kartu-keluarga/edit.blade.php | [ ] |
-| 8 | View: kartu-keluarga/show.blade.php (daftar anggota) | [ ] |
-| 9 | Routes: resource kartu-keluarga | [ ] |
-| 10 | StoreKartuKeluargaRequest | [ ] |
-| 11 | UpdateKartuKeluargaRequest | [ ] |
-| 12 | Fitur: tambah anggota keluarga ke KK | [ ] |
-| 13 | Fitur: hapus anggota dari KK | [ ] |
-| 14 | Fitur: ganti kepala keluarga | [ ] |
-| 15 | Export PDF KK | [ ] |
-| 16 | Export Excel KK | [ ] |
-| 17 | Import Excel KK | [ ] |
+| 1 | Migration tabel `kartu_keluarga` | [x] |
+| 2 | Migration update: tambah FK kepala_keluarga_id, rt, rw, kode_pos, nomor_telepon | [x] |
+| 3 | Model KartuKeluarga (relations: kepalaKeluarga, anggotaKeluarga) | [x] |
+| 4 | KartuKeluargaController (legacy, masih ada) | [x] |
+| 5-9 | Views/Legacy (hidden from sidebar) | [x] |
+| 10-17 | Fitur KK lama digantikan oleh modul Data Keluarga (I.1) | [/] | |
 
 ### C.4 Mutasi Penduduk
 
@@ -694,13 +684,66 @@
 |------|-----------|---------|----------|
 | A. Setup & Infrastruktur | ~65 | 5 | **~8%** |
 | B. Auth & Authorization | ~25 | 0 | **0%** |
-| C. Fase 1 (KKN) | ~145 | 0 | **0%** |
+| C. Fase 1 (KKN) - Data Keluarga | ~30 | 24 | **~80%** |
+| C. Fase 1 (KKN) - Lainnya | ~115 | 0 | **0%** |
 | D. Fase 2 | ~40 | 0 | **0%** |
 | E. Fase 3 | ~35 | 0 | **0%** |
 | F. Laporan | ~20 | 0 | **0%** |
-| G. Layout & UI | ~12 | 0 | **0%** |
+| G. Layout & UI | ~12 | 3 | **~25%** |
 | H. Testing | ~25 | 0 | **0%** |
-| **Total** | **~367** | **5** | **~1.4%** |
+| **Total** | **~367** | **32** | **~8.7%** |
+
+---
+
+## SESI 2 — 18 Juni 2026: Modul Data Keluarga
+
+### I.1 Data Keluarga (Module Baru)
+
+| # | Task | Status |
+|---|------|--------|
+| 1 | KeluargaController (index, create, store, show, edit, update, destroy) | [x] |
+| 2 | View: keluarga/index.blade.php (daftar KK + semua anggota + keterangan hubungan) | [x] |
+| 3 | View: keluarga/create.blade.php (wizard 3 step + AlpineJS) | [x] |
+| 4 | View: keluarga/edit.blade.php | [x] |
+| 5 | View: keluarga/show.blade.php (detail anggota per grup + modal edit/hapus) | [x] |
+| 6 | Routes: resource keluarga + anggota store/update/destroy | [x] |
+| 7 | AlpineJS installed & bundled via Vite | [x] |
+| 8 | Store validasi server-side (StoreKeluargaRequest-style inline) | [x] |
+| 9 | Wizard Step 1: Info Keluarga (layout rapi, spasi lega) | [x] |
+| 10 | Wizard Step 2: Kepala Keluarga (layout rapi, validasi NIK 16 digit) | [x] |
+| 11 | Wizard Step 3: Anggota Keluarga (repeater dinamis) | [x] |
+| 12 | Dynamic conditional fields (Anak→Status Anak, Ortu→Hub Ortu, Kerabat→Hub Kerabat) | [x] |
+| 13 | Client-side validation per step (AlpineJS) | [x] |
+| 14 | Nomor KK maxlength 16 + validasi 16 digit | [x] |
+| 15 | RT/RW validasi numeric | [x] |
+| 16 | Kode Pos validasi 5 digit (jika diisi) | [x] |
+| 17 | No Telepon validasi numeric (jika diisi) | [x] |
+| 18 | Required/optional indicators konsisten | [x] |
+| 19 | Tombol Edit KK di halaman detail | [x] |
+| 20 | Modal Edit Anggota (pre-populated) | [x] |
+| 21 | Hapus Anggota (konfirmasi, proteksi kepala keluarga) | [x] |
+| 22 | Urutan anggota: Kepala→Istri→Anak(by lahir)→Ortu→Kerabat | [x] |
+| 23 | Label Anak Pertama/Kedua berdasarkan urutan lahir | [x] |
+| 24 | Index page redesain: card per keluarga + daftar anggota + keterangan hubungan | [x] |
+| 25 | Seeder: 10 KK dengan istri + 1-3 anak | [x] |
+
+### I.2 Migration & Database
+
+| # | Task | Status |
+|---|------|--------|
+| 1 | Migration tambah rt/rw/kode_pos/nomor_telepon ke kartu_keluarga | [x] |
+| 2 | Hapus dependency wilayah_id dari kartu_keluarga | [x] |
+| 3 | Update StorePendudukRequest: wilayah_id_baru → rt_baru/rw_baru | [x] |
+| 4 | Bersihkan semua referensi `wilayah?->rt/rw` di views | [x] |
+| 5 | Hapus eager load `wilayah` dari KeluargaController & KartuKeluargaController | [x] |
+
+### I.3 Layout & Panel
+
+| # | Task | Status |
+|---|------|--------|
+| 1 | Sidebar: Data Keluarga (Daftar Keluarga) ganti Data Penduduk + KK | [x] |
+| 2 | Panel header: "Desa ITCI" / "Sistem Informasi Penduduk" | [x] |
+| 3 | Title tab: "Desa ITCI - ..." | [x] |
 
 ---
 
