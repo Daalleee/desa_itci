@@ -1,6 +1,8 @@
 # PROGRES.MD - SIPDES ITCI
 
 > Terakhir diperbarui: 18 Juni 2026
+>
+> **Sesi 1 Selesai:** Packages ✓ | Migrations ✓ | Models ✓ | Seeders ✓ | Login ✓
 
 ---
 
@@ -8,11 +10,12 @@
 
 | Fase | Progress |
 |------|----------|
-| Setup & Infrastruktur | **~5%** |
+| Setup & Infrastruktur | **~60%** |
+| Auth & Authorization | **~30%** |
 | Fase 1 (KKN) | **~1%** |
 | Fase 2 | **0%** |
 | Fase 3 | **0%** |
-| **Total Proyek** | **~1.5%** |
+| **Total Proyek** | **~8%** |
 
 ---
 
@@ -26,9 +29,9 @@
 | 2 | Konfigurasi .env (MySQL, database desa_itci) | [x] |
 | 3 | App Key generated | [x] |
 | 4 | Vite + Tailwind CSS v4 setup | [x] |
-| 5 | Install Spatie Laravel Permission (`composer require spatie/laravel-permission`) | [ ] |
-| 6 | Install DomPDF (`composer require barryvdh/laravel-dompdf`) | [ ] |
-| 7 | Install Laravel Excel (`composer require maatwebsite/laravel-excel`) | [ ] |
+| 5 | Install Spatie Laravel Permission (`composer require spatie/laravel-permission`) | [x] |
+| 6 | Install DomPDF (`composer require barryvdh/laravel-dompdf`) | [x] |
+| 7 | Install Laravel Excel (`composer require maatwebsite/laravel-excel`) | [x] |
 | 8 | Konfigurasi filesystems (local/public storage) | [ ] |
 | 9 | Konfigurasi timezone & locale (Indonesia) | [ ] |
 | 10 | Setup error handling (custom exception) | [ ] |
@@ -47,108 +50,108 @@
 
 | # | Task | Status |
 |---|------|--------|
-| 1 | Migration tabel `agama` | [ ] |
-| 2 | Migration tabel `pendidikan` | [ ] |
-| 3 | Migration tabel `pekerjaan` | [ ] |
-| 4 | Migration tabel `wilayah` | [ ] |
-| 5 | Migration tabel `jenis_surat` | [ ] |
+| 1 | Migration tabel `agama` | [x] |
+| 2 | Migration tabel `pendidikan` | [x] |
+| 3 | Migration tabel `pekerjaan` | [x] |
+| 4 | Migration tabel `wilayah` | [x] |
+| 5 | Migration tabel `jenis_surat` | [x] |
 
 #### A.2.3 Sistem
 
 | # | Task | Status |
 |---|------|--------|
-| 1 | Migration tabel `aktivitas_sistem` | [ ] |
-| 2 | Migration tabel `backup_database` | [ ] |
-| 3 | Migration tabel `notifikasi_sistem` | [ ] |
-| 4 | Migration Spatie permission tables | [ ] |
+| 1 | Migration tabel `aktivitas_sistem` | [x] |
+| 2 | Migration tabel `backup_database` | [x] |
+| 3 | Migration tabel `notifikasi_sistem` | [x] |
+| 4 | Migration Spatie permission tables | [x] |
 
 #### A.2.4 Kependudukan
 
 | # | Task | Status |
 |---|------|--------|
-| 1 | Migration tabel `kartu_keluarga` | [ ] |
-| 2 | Migration tabel `penduduk` | [ ] |
-| 3 | Migration tabel `mutasi_penduduk` | [ ] |
+| 1 | Migration tabel `kartu_keluarga` | [x] |
+| 2 | Migration tabel `penduduk` | [x] |
+| 3 | Migration tabel `mutasi_penduduk` | [x] |
 
 #### A.2.5 Surat Menyurat
 
 | # | Task | Status |
 |---|------|--------|
-| 1 | Migration tabel `surat` | [ ] |
-| 2 | Migration tabel `template_surat` | [ ] |
-| 3 | Migration tabel `pengaturan_surat` | [ ] |
+| 1 | Migration tabel `surat` | [x] |
+| 2 | Migration tabel `template_surat` | [x] |
+| 3 | Migration tabel `pengaturan_surat` | [x] |
 
 #### A.2.6 Dokumen
 
 | # | Task | Status |
 |---|------|--------|
-| 1 | Migration tabel `dokumen_warga` | [ ] |
-| 2 | Migration tabel `dokumen_desa` | [ ] |
+| 1 | Migration tabel `dokumen_warga` | [x] |
+| 2 | Migration tabel `dokumen_desa` | [x] |
 
 #### A.2.7 Website Desa
 
 | # | Task | Status |
 |---|------|--------|
-| 1 | Migration tabel `konfigurasi_desa` | [ ] |
-| 2 | Migration tabel `profil_desa` | [ ] |
-| 3 | Migration tabel `struktur_organisasi` | [ ] |
-| 4 | Migration tabel `berita` | [ ] |
-| 5 | Migration tabel `galeri` | [ ] |
-| 6 | Migration tabel `potensi_desa` | [ ] |
-| 7 | Migration tabel `pengumuman` | [ ] |
+| 1 | Migration tabel `konfigurasi_desa` | [x] |
+| 2 | Migration tabel `profil_desa` | [x] |
+| 3 | Migration tabel `struktur_organisasi` | [x] |
+| 4 | Migration tabel `berita` | [x] |
+| 5 | Migration tabel `galeri` | [x] |
+| 6 | Migration tabel `potensi_desa` | [x] |
+| 7 | Migration tabel `pengumuman` | [x] |
 
 #### A.2.8 Import Excel
 
 | # | Task | Status |
 |---|------|--------|
-| 1 | Migration tabel `riwayat_import` | [ ] |
-| 2 | Migration tabel `detail_import_error` | [ ] |
-| 3 | Migration tabel `audit_import` | [ ] |
+| 1 | Migration tabel `riwayat_import` | [x] |
+| 2 | Migration tabel `detail_import_error` | [x] |
+| 3 | Migration tabel `audit_import` | [x] |
 
 ### A.3 Models
 
 | # | Task | Status |
 |---|------|--------|
-| 1 | Model User (update: tambah Spatie traits, relasi) | [ ] |
-| 2 | Model Agama | [ ] |
-| 3 | Model Pendidikan | [ ] |
-| 4 | Model Pekerjaan | [ ] |
-| 5 | Model Wilayah | [ ] |
-| 6 | Model JenisSurat | [ ] |
-| 7 | Model KartuKeluarga | [ ] |
-| 8 | Model Penduduk | [ ] |
-| 9 | Model MutasiPenduduk | [ ] |
-| 10 | Model Surat | [ ] |
-| 11 | Model TemplateSurat | [ ] |
-| 12 | Model PengaturanSurat | [ ] |
-| 13 | Model DokumenWarga | [ ] |
-| 14 | Model DokumenDesa | [ ] |
-| 15 | Model KonfigurasiDesa | [ ] |
-| 16 | Model ProfilDesa | [ ] |
-| 17 | Model StrukturOrganisasi | [ ] |
-| 18 | Model Berita | [ ] |
-| 19 | Model Galeri | [ ] |
-| 20 | Model PotensiDesa | [ ] |
-| 21 | Model Pengumuman | [ ] |
-| 22 | Model AktivitasSistem | [ ] |
-| 23 | Model BackupDatabase | [ ] |
-| 24 | Model NotifikasiSistem | [ ] |
-| 25 | Model RiwayatImport | [ ] |
-| 26 | Model DetailImportError | [ ] |
-| 27 | Model AuditImport | [ ] |
+| 1 | Model User (update: tambah Spatie traits, relasi) | [x] |
+| 2 | Model Agama | [x] |
+| 3 | Model Pendidikan | [x] |
+| 4 | Model Pekerjaan | [x] |
+| 5 | Model Wilayah | [x] |
+| 6 | Model JenisSurat | [x] |
+| 7 | Model KartuKeluarga | [x] |
+| 8 | Model Penduduk | [x] |
+| 9 | Model MutasiPenduduk | [x] |
+| 10 | Model Surat | [x] |
+| 11 | Model TemplateSurat | [x] |
+| 12 | Model PengaturanSurat | [x] |
+| 13 | Model DokumenWarga | [x] |
+| 14 | Model DokumenDesa | [x] |
+| 15 | Model KonfigurasiDesa | [x] |
+| 16 | Model ProfilDesa | [x] |
+| 17 | Model StrukturOrganisasi | [x] |
+| 18 | Model Berita | [x] |
+| 19 | Model Galeri | [x] |
+| 20 | Model PotensiDesa | [x] |
+| 21 | Model Pengumuman | [x] |
+| 22 | Model AktivitasSistem | [x] |
+| 23 | Model BackupDatabase | [x] |
+| 24 | Model NotifikasiSistem | [x] |
+| 25 | Model RiwayatImport | [x] |
+| 26 | Model DetailImportError | [x] |
+| 27 | Model AuditImport | [x] |
 
 ### A.4 Seeders
 
 | # | Task | Status |
 |---|------|--------|
-| 1 | AgamaSeeder (Islam, Kristen, Katolik, Hindu, Buddha, Konghucu) | [ ] |
-| 2 | PendidikanSeeder (Tidak Sekolah, SD, SMP, SMA, D1-D4, S1-S3) | [ ] |
-| 3 | PekerjaanSeeder (data awal pekerjaan umum) | [ ] |
-| 4 | WilayahSeeder (RT/RW default) | [ ] |
-| 5 | JenisSuratSeeder (7 jenis surat) | [ ] |
-| 6 | RolePermissionSeeder (admin & operator_cms) | [ ] |
-| 7 | AdminUserSeeder (akun admin default) | [ ] |
-| 8 | DatabaseSeeder orchestrate (panggil semua seeder) | [ ] |
+| 1 | AgamaSeeder (Islam, Kristen, Katolik, Hindu, Buddha, Konghucu) | [x] |
+| 2 | PendidikanSeeder (Tidak Sekolah, SD, SMP, SMA, D1-D4, S1-S3) | [x] |
+| 3 | PekerjaanSeeder (data awal pekerjaan umum) | [x] |
+| 4 | WilayahSeeder (RT/RW default) | [x] |
+| 5 | JenisSuratSeeder (7 jenis surat) | [x] |
+| 6 | RolePermissionSeeder (admin & operator_cms) | [x] |
+| 7 | AdminUserSeeder (akun admin default) | [x] |
+| 8 | DatabaseSeeder orchestrate (panggil semua seeder) | [x] |
 
 ---
 
@@ -158,11 +161,11 @@
 
 | # | Task | Status |
 |---|------|--------|
-| 1 | Install Laravel Breeze atau buat custom auth | [ ] |
-| 2 | LoginController (authenticate) | [ ] |
-| 3 | Login view (login.blade.php) | [ ] |
-| 4 | Login route (GET/POST /login) | [ ] |
-| 5 | Logout (POST /logout) | [ ] |
+| 1 | Install Laravel Breeze atau buat custom auth | [x] |
+| 2 | LoginController (authenticate) | [x] |
+| 3 | Login view (login.blade.php) | [x] |
+| 4 | Login route (GET/POST /login) | [x] |
+| 5 | Logout (POST /logout) | [x] |
 | 6 | Forgot Password view & controller | [ ] |
 | 7 | Reset Password view & controller | [ ] |
 | 8 | Middleware redirect if authenticated | [ ] |
@@ -171,19 +174,19 @@
 
 | # | Task | Status |
 |---|------|--------|
-| 1 | Publish Spatie config & migration | [ ] |
-| 2 | Konfigurasi guard & permission di config/permission.php | [ ] |
-| 3 | Seeder: definisi roles (admin, operator_cms) | [ ] |
-| 4 | Seeder: definisi permissions per modul | [ ] |
+| 1 | Publish Spatie config & migration | [x] |
+| 2 | Konfigurasi guard & permission di config/permission.php | [x] |
+| 3 | Seeder: definisi roles (admin, operator_cms) | [x] |
+| 4 | Seeder: definisi permissions per modul | [x] |
 | 5 | Middleware `role:admin` / `role:operator_cms` | [ ] |
-| 6 | Blade directives: @role, @can, @permission | [ ] |
+| 6 | Blade directives: @role, @can, @permission | [x] |
 | 7 | Gate policies per model | [ ] |
 
 ### B.3 User Management
 
 | # | Task | Status |
 |---|------|--------|
-| 1 | Migration: update users (tambah role, foto, last_login) | [ ] |
+| 1 | Migration: update users (tambah role, foto, last_login) | [x] |
 | 2 | Model User: tambah Spatie traits, casts | [ ] |
 | 3 | UserController (index, create, store, edit, update, destroy) | [ ] |
 | 4 | View: users/index.blade.php | [ ] |
@@ -201,8 +204,8 @@
 
 | # | Task | Status |
 |---|------|--------|
-| 1 | DashboardController | [ ] |
-| 2 | View: dashboard/index.blade.php | [ ] |
+| 1 | DashboardController | [x] |
+| 2 | View: dashboard/index.blade.php | [x] |
 | 3 | Statistik cards: total penduduk, KK, L/P, balita, lansia | [ ] |
 | 4 | Statistik administrasi: surat hari ini, bulan ini, penduduk masuk/keluar | [ ] |
 | 5 | Statistik website: total berita, pengumuman, galeri | [ ] |
@@ -210,7 +213,7 @@
 | 7 | Grafik: penduduk berdasarkan pendidikan | [ ] |
 | 8 | Grafik: penduduk berdasarkan agama | [ ] |
 | 9 | Grafik: penduduk berdasarkan pekerjaan | [ ] |
-| 10 | Route dashboard (GET /dashboard) | [ ] |
+| 10 | Route dashboard (GET /dashboard) | [x] |
 
 ### C.2 Data Penduduk
 
@@ -632,9 +635,9 @@
 
 | # | Task | Status |
 |---|------|--------|
-| 1 | Layout admin (sidebar, navbar, content area) | [ ] |
+| 1 | Layout admin (sidebar, navbar, content area) | [x] |
 | 2 | Layout publik (header, footer, content) | [ ] |
-| 3 | Layout auth (login, register) | [ ] |
+| 3 | Layout auth (login, register) | [x] |
 | 4 | Komponen sidebar menu (collapsible, active state) | [ ] |
 | 5 | Komponen navbar (user dropdown, notifikasi) | [ ] |
 | 6 | Komponen tabel (sort, search, pagination) | [ ] |
