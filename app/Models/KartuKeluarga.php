@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class KartuKeluarga extends Model
 {
     protected $fillable = [
-        'nomor_kk', 'wilayah_id', 'alamat', 'kode_pos',
+        'nomor_kk', 'rt', 'rw', 'wilayah_id', 'alamat', 'kode_pos',
         'nomor_telepon', 'kepala_keluarga_id', 'status',
     ];
 

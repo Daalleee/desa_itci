@@ -9,7 +9,7 @@ class Penduduk extends Model
     protected $fillable = [
         'kode_warga', 'kartu_keluarga_id', 'nik', 'nama_lengkap',
         'tempat_lahir', 'tanggal_lahir', 'jenis_kelamin',
-        'agama_id', 'pendidikan_id', 'pekerjaan_id',
+        'agama_id', 'pekerjaan', 'pendidikan',
         'status_perkawinan', 'golongan_darah', 'nomor_telepon',
         'hubungan_keluarga', 'status_penduduk', 'foto',
     ];
@@ -31,16 +31,6 @@ class Penduduk extends Model
     public function agama()
     {
         return $this->belongsTo(Agama::class);
-    }
-
-    public function pendidikan()
-    {
-        return $this->belongsTo(Pendidikan::class);
-    }
-
-    public function pekerjaan()
-    {
-        return $this->belongsTo(Pekerjaan::class);
     }
 
     public function mutasi()
